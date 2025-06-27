@@ -5,13 +5,13 @@ const { posts, recentPosts, loading, error } = usePosts();
 
 <template>
   <div>
-    <h1>Posts</h1>
+    <h1 class="font-extrabold">Posts</h1>
     <ul>
       <li v-for="post in posts" :key="post.id">
         <h2>
           <span
             v-if="recentPosts.some((rp) => rp.id === post.id)"
-            style="color: red; font-weight: bold"
+            class="text-green-500"
             >Recent</span
           >
           {{ post.title }}
